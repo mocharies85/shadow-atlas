@@ -17,7 +17,8 @@ Just a short drive beyond the vibrant university town of Cluj-Napoca lies a wood
 Here, science meets folklore, and centuries of superstition collide with documented environmental anomalies.
 
 ---
-
+![The Twisted Trees of Hoia-Baciu Forest](https://images.unsplash.com/photo-1511497584788-87676104235f?q=80&w=1200&auto=format&fit=crop)
+*The eerie, mist-covered canopies and warped trunks characteristic of the Transylvanian woodland.*
 ## The Origins: The Shepherd Who Disappeared
 
 The forest takes its name from a local shepherd named Baci. According to local lore, Baci ventured into the dense canopy with his flock of 200 sheep and was never seen again. Despite extensive search parties organized by surrounding villages, neither the shepherd nor a single trace of his flock was ever uncovered.
@@ -27,7 +28,8 @@ For generations, locals avoided the forest border entirely. Superstitions warned
 ---
 
 ## The 1968 UFO Sensation
-
+![UFO Sensation over Hoia-Baciu 1968](https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop)
+*Archival representation of unexplained aerial phenomena documented above the Romanian tree line.*
 While folklore kept villagers at bay, global attention exploded in August 1968. Emil Barnea, a military technician, ignored local taboos and camped within the woods alongside his friends. 
 
 Midway through the afternoon, Barnea witnessed a strange metallic disc hovering silently above the tree line. Before it sped toward the clouds, he managed to capture several sharp photographs. Unlike many sensationalized claims of the era, Barnea had nothing to gain from the sighting—he risked his career and faced severe reprimands from the communist government for publicizing the event. 
@@ -44,6 +46,8 @@ Beyond spectral tales, Hoia-Baciu presents physical characteristics that defy co
 Throughout the southern rim of the woods, oak and beech trees do not grow straight toward the sunlight. Instead, entire groves spiral outward in synchronized 90-degree curves near the base, resembling petrified bone fragments or grasping claws. Botanists have examined these trunks, yet no concrete explanation—such as wind shear or abnormal fungal infections—accounts for the uniform warping.
 
 ### 2. The Dead Zone: Poiana Rotundă (The Round Meadow)
+![Poiana Rotunda Circular Clearing](https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=1200&auto=format&fit=crop)
+*Poiana Rotundă: the enigmatic barren circle where vegetation mysteriously ceases to thrive.*
 Deep within the forest sits an almost perfect circular clearing where virtually no trees or tall vegetation grow. Soil core samples taken by Romanian biological institutes revealed normal pH levels and no toxic heavy metals, yet plant life remains stunted compared to the surrounding forest edge. Electronic compasses frequently spin out of calibration when crossing into the circle.
 
 ### 3. Physical Symptoms
