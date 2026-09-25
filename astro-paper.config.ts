@@ -4,9 +4,9 @@ export default defineAstroPaperConfig({
   site: {
     url: "https://astro-paper.pages.dev/",
     title: "ShadowAtlas",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    description: "Exploring the world's most mysterious places and eerie travel destinations.",
+    author: "Cycrack",
+    profile: "https://shadow-atlas.mocharies85.workers.dev",
     ogImage: "default-og.jpg",
     lang: "en",
     timezone: "Asia/Bangkok",
