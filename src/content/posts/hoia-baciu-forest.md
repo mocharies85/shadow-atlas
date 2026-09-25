@@ -1,6 +1,6 @@
 ---
 author: ShadowAtlas
-pubDatetime: 2026-09-26T00:00:00Z
+pubDatetime: pubDatetime: 2026-09-25T00:00:00Z
 title: "Hoia-Baciu Forest, Romania: Inside Europe’s Most Haunted Woods"
 featured: true
 draft: false
