@@ -1,0 +1,23 @@
+name: Daily Auto-Publish Trigger
+
+on:
+  schedule:
+    # Berjalan otomatis setiap hari pukul 17:05 UTC (00:05 WIB tengah malam)
+    - cron: "5 17 * * *"
+  workflow_dispatch: # Memungkinkan tombol uji coba manual dari tab Actions
+
+jobs:
+  trigger-build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger Cloudflare Rebuild
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "chore: scheduled daily rebuild [$(date +'%Y-%m-%d')]"
+          git push origin main
