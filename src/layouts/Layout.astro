@@ -121,25 +121,44 @@ const rssHref = getRelativeLocaleUrl(
   >
     <slot />
 
-    <!-- Floating Buy Me a Coffee Button -->
-    <a
-      href="https://buymeacoffee.com/cycrack"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#FF813F] px-4 py-2.5 text-sm font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#ff965e] hover:shadow-2xl focus:outline-none"
-      aria-label="Support ShadowAtlas on Buy Me a Coffee"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        class="h-5 w-5"
-      >
-        <path
-          d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"
-        />
-      </svg>
-      <span>Support</span>
+    <!-- Tombol Melayang Ko-fi di Pojok Kanan Bawah -->
+    <style>
+      .kofi-floating-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #72a4f2;
+        color: #ffffff;
+        padding: 10px 18px;
+        border-radius: 50px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .kofi-floating-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+        color: #ffffff;
+      }
+      @media (max-width: 600px) {
+        .kofi-floating-btn {
+          bottom: 16px;
+          right: 16px;
+          padding: 8px 14px;
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <a href="https://ko-fi.com/cycrack" target="_blank" rel="noopener noreferrer" class="kofi-floating-btn">
+      ☕ <span>Support me on Ko-fi</span>
     </a>
 
     <script>
