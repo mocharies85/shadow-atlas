@@ -1,37 +1,38 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "About ShadowAtlas - Chronicling the world's most enigmatic destinations, dark history, and forbidden geographies."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+Welcome to **ShadowAtlas**, an independent digital field archive dedicated to documenting the planet's most enigmatic landscapes, haunted ruins, subterranean networks, and anomalous frontiers.
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+We operate at the intersection of archival history, folklore, and immersive field exploration—bringing clarity to destinations where science, human tragedy, and ancient superstitions converge.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+![ShadowAtlas Expedition Archive](/about-banner.jpg)
+*Mapping the obscure: from forgotten quarantine islands to subterranean limestone labyrinths.*
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## The Mission
 
-## Features
+Mainstream travel guides excel at mapping sunny coastlines and luxury resorts. **ShadowAtlas was built for unconventional wanderers**—those compelled by silent stone corridors, forbidden islands, and the lingering weight of history.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+Our objective is to deliver deeply researched, objective, and culturally respectful chronicles of global *dark tourism* and anomalous geographies, complete with practical logistics for travelers who dare to venture beyond conventional itineraries.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## Core Editorial Pillars
 
-and so much more.
+1. **Archival Rigor Over Sensationalism**  
+   Every myth begins with a grain of truth. We dissect sensationalized claims by examining declassified reports, municipal archives, and botanical or geological data while honoring the authentic atmosphere of each site.
 
-## Show your support
+2. **Ethical & Responsible Dark Tourism**  
+   Investigating plague pits, abandoned sanitariums, or former quarantine colonies requires profound respect. We promote strict non-destructive exploration (*leave no trace*), lawful travel, and reverence for human suffering.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+3. **Actionable Field Guides**  
+   Curiosity requires preparation. Alongside historical lore, we supply critical logistics: legal entry parameters, certified local guide contacts, navigation hazards, transit routes, and field safety protocols.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+## The Field Archive
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+* **Subterranean Realms & Ossuaries:** Deep descents beneath major metropolises, ancient limestone quarries, and catacomb networks.
+* **Quarantine Colonies & Ruins:** Forgotten lazarettos, abandoned psychiatric hospitals, and coastal defense installations reclaimed by nature.
+* **Anomalous Wilderness:** Warped woodlands, silent forests, and regions steeped in unexplained environmental phenomena.
 
-Kyay zuu! 🙏🏼
+---
+
+*The borders of ShadowAtlas are constantly expanding. Whether you are preparing for your next nocturnal trek or exploring from your desk, welcome to the quiet edge of the world map.*
