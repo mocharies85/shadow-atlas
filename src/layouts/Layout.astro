@@ -120,6 +120,28 @@ const rssHref = getRelativeLocaleUrl(
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
     <slot />
+
+    <!-- Floating Buy Me a Coffee Button -->
+    <a
+      href="https://buymeacoffee.com/cycrack"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#FF813F] px-4 py-2.5 text-sm font-semibold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-[#ff965e] hover:shadow-2xl focus:outline-none"
+      aria-label="Support ShadowAtlas on Buy Me a Coffee"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="h-5 w-5"
+      >
+        <path
+          d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"
+        />
+      </svg>
+      <span>Support</span>
+    </a>
+
     <script>
       import "@/scripts/theme";
     </script>
