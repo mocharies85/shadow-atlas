@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import { SITE } from "@/config";
+import config from "@/config";
 
 // Mengambil semua artikel yang bukan draft
 const posts = await getCollection("posts", ({ data }) => !data.draft);
@@ -22,7 +22,7 @@ const galleryItems = sortedPosts
     const imgMatch = post.body ? post.body.match(/!\[(.*?)\]\((.*?)\)/) : null;
     const imageUrl = imgMatch ? imgMatch[2] : null;
     const imageAlt = imgMatch ? imgMatch[1] : post.data.title;
-    const postSlug = post.slug ?? post.id.replace(/\.md$/, "");
+    const postSlug = post.id.replace(/\.(md|mdx)$/, "");
 
     return {
       title: post.data.title,
@@ -33,11 +33,11 @@ const galleryItems = sortedPosts
       tag: post.data.tags?.[0] ?? "dark-tourism",
     };
   })
-  .filter(item => Boolean(item.imageUrl)); // Hanya tampilkan artikel yang memiliki gambar
+  .filter((item): item is typeof item & { imageUrl: string } => Boolean(item.imageUrl));
 ---
 
-<Layout title={`Gallery | ${SITE.title}`}>
-  <Header activeNav="gallery" />
+<Layout title={`Gallery | ${config.site.title}`}>
+  <Header />
 
   <main id="main-content" class="mx-auto max-w-6xl px-4 py-8">
     <!-- Header Galeri -->
@@ -68,7 +68,7 @@ const galleryItems = sortedPosts
               />
             </div>
 
-            <!-- Overlay & Keterangan Judul -->
+            <!-- Keterangan Judul -->
             <div class="p-4 flex flex-col justify-between">
               <div>
                 <span class="inline-block mb-2 rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-accent">
