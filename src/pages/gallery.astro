@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+// Mengambil semua artikel yang bukan draft
+const posts = await getCollection("posts", ({ data }) => !data.draft);
+
+// Urutkan artikel dari yang terbaru
+const sortedPosts = posts.sort(
+  (a, b) =>
+    Math.floor(new Date(b.data.pubDatetime).getTime() / 1000) -
+    Math.floor(new Date(a.data.pubDatetime).getTime() / 1000)
+);
+
+// Ekstrak gambar pertama dari isi markdown tiap artikel secara otomatis
+const galleryItems = sortedPosts
+  .map(post => {
+    // Mencari tag gambar markdown pertama: ![alt](url)
+    const imgMatch = post.body ? post.body.match(/!\[(.*?)\]\((.*?)\)/) : null;
+    const imageUrl = imgMatch ? imgMatch[2] : null;
+    const imageAlt = imgMatch ? imgMatch[1] : post.data.title;
+    const postSlug = post.slug ?? post.id.replace(/\.md$/, "");
+
+    return {
+      title: post.data.title,
+      description: post.data.description,
+      slug: `/posts/${postSlug}/`,
+      imageUrl,
+      imageAlt,
+      tag: post.data.tags?.[0] ?? "dark-tourism",
+    };
+  })
+  .filter(item => Boolean(item.imageUrl)); // Hanya tampilkan artikel yang memiliki gambar
+---
+
+<Layout title={`Gallery | ${SITE.title}`}>
+  <Header activeNav="gallery" />
+
+  <main id="main-content" class="mx-auto max-w-6xl px-4 py-8">
+    <!-- Header Galeri -->
+    <section class="mb-10 text-center">
+      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl text-accent">
+        Visual Gallery
+      </h1>
+      <p class="mt-2 text-sm text-foreground/75 sm:text-base max-w-xl mx-auto">
+        Explore our curated photographic archive of forgotten fortresses, subterranean relics, and historical anomalies across the globe. Click any image to read the full investigation.
+      </p>
+    </section>
+
+    <!-- Grid Gambar Responsif -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        galleryItems.map(item => (
+          <a
+            href={item.slug}
+            class="group relative block overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-accent"
+          >
+            <!-- Wadah Gambar -->
+            <div class="aspect-[16/10] w-full overflow-hidden bg-muted">
+              <img
+                src={item.imageUrl}
+                alt={item.imageAlt}
+                loading="lazy"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            <!-- Overlay & Keterangan Judul -->
+            <div class="p-4 flex flex-col justify-between">
+              <div>
+                <span class="inline-block mb-2 rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider text-accent">
+                  #{item.tag}
+                </span>
+                <h2 class="text-base font-bold leading-snug line-clamp-2 text-foreground group-hover:text-accent transition-colors">
+                  {item.title}
+                </h2>
+              </div>
+              <span class="mt-3 inline-flex items-center text-xs font-medium text-accent">
+                Read Investigation &rarr;
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
