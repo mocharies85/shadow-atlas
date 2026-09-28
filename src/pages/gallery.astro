@@ -5,10 +5,17 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import config from "@/config";
 
-// Mengambil semua artikel yang bukan draft
-const posts = await getCollection("posts", ({ data }) => !data.draft);
+// Waktu saat ini
+const now = new Date();
 
-// Urutkan artikel dari yang terbaru
+// Hanya ambil artikel yang bukan draft DAN tanggal terbitnya sudah tiba/lewat
+const posts = await getCollection("posts", ({ data }) => {
+  const isNotDraft = !data.draft;
+  const isPublished = new Date(data.pubDatetime) <= now;
+  return isNotDraft && isPublished;
+});
+
+// Urutkan artikel dari yang paling baru terbit
 const sortedPosts = posts.sort(
   (a, b) =>
     Math.floor(new Date(b.data.pubDatetime).getTime() / 1000) -
