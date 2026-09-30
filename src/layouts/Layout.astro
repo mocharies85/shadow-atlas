@@ -120,15 +120,17 @@ const rssHref = getRelativeLocaleUrl(
 
     <ClientRouter />
 
-    <!-- PopAds Script -->
-    <script type="text/javascript" data-cfasync="false" is:inline>
-    /*<![CDATA[/* */
-    (function(){var r=window,g="cbad297b196ccf7d44a6f69e77553429",i=[["siteId",171*91-446*113+5356235],["minBid",0],["popundersPerIP","2:1"],["delayBetween",1800],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],x=["d3d3LnhhZHNtYXJ0LmNvbS9lcHJlYWN0Lm1pbi5jc3M=","ZDExZW5xMnJ5bXkweWwuY2xvdWRmcm9udC5uZXQvTm8vc3NjcmVlbmZ1bGwubWluLmpz"],q=-1,j,k,p=function(){clearTimeout(k);q++;if(x[q]&&!(1816418650000<(new Date).getTime()&&1<q)){j=r.document.createElement("script");j.type="text/javascript";j.async=!0;var f=r.document.getElementsByTagName("script")[0];j.src="https://"+atob(x[q]);j.crossOrigin="anonymous";j.onerror=p;j.onload=function(){clearTimeout(k);r[g.slice(0,16)+g.slice(0,16)]||p()};k=setTimeout(p,5E3);f.parentNode.insertBefore(j,f)}};if(!r[g]){try{Object.freeze(r[g]=i)}catch(e){}p()}})();
-    /*]]>/* */
+    <!-- Adsterra Social Bar (Ditunda 15 detik agar pembaca nyaman) -->
+    <script is:inline>
+      setTimeout(function () {
+        if (!document.getElementById("adsterra-social-bar")) {
+          const s = document.createElement("script");
+          s.id = "adsterra-social-bar";
+          s.src = "https://pl31587434.profitableratecpmnetwork.com/f7/1e/a1/f71ea1e54f528b2b718de59e7bd20c30.js";
+          document.head.appendChild(s);
+        }
+      }, 15000);
     </script>
-
-    <!-- Adsterra Social Bar -->
-    <script is:inline src="https://pl31587434.profitableratecpmnetwork.com/f7/1e/a1/f71ea1e54f528b2b718de59e7bd20c30.js"></script>
   </head>
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
