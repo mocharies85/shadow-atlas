@@ -131,6 +131,15 @@ const rssHref = getRelativeLocaleUrl(
         }
       }, 15000);
     </script>
+
+    <!-- Cloudflare Web Analytics (ShadowAtlas) -->
+    <script
+      is:inline
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "7b0633af53be462d8fce053407ff0635"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
@@ -199,14 +208,13 @@ const rssHref = getRelativeLocaleUrl(
         </div>
       </div>
 
-      <!-- Tombol Kapsul Kecil Melayang (Selalu Siap & Tidak Mengganggu) -->
+      <!-- Tombol Kapsul Kecil Melayang -->
       <button
         id="kofi-mini-trigger"
         type="button"
         class="group flex items-center gap-2 rounded-full border border-border/80 bg-background/90 px-3.5 py-2 shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-accent hover:shadow-accent/20 cursor-pointer"
         title="Support ShadowAtlas on Ko-fi"
       >
-        <!-- Titik animasi berkedip halus -->
         <span class="relative flex h-2 w-2">
           <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
           <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
@@ -218,7 +226,7 @@ const rssHref = getRelativeLocaleUrl(
       </button>
     </div>
 
-    <!-- Skrip Interaktif Timer & Cooldown -->
+    <!-- Skrip Interaktif Timer & Cooldown Ko-fi -->
     <script is:inline>
       function initKofiSmartWidget() {
         const card = document.getElementById("kofi-prompt-card");
