@@ -90,6 +90,15 @@ const isActive = (path: string) => {
             Gallery
           </a>
         </li>
+        <!-- Tab Popular di sebelah Gallery -->
+        <li class="col-span-2">
+          <a
+            href={getRelativeLocaleUrl(locale, "popular")}
+            class:list={{ "active-nav": isActive("/popular") }}
+          >
+            Popular
+          </a>
+        </li>
         <li class="col-span-2">
           <a
             href={getRelativeLocaleUrl(locale, "tags")}
