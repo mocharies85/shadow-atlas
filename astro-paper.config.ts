@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
+    url: "https://shadowatlas.curiolot.com/",
     title: "ShadowAtlas",
     description: "Exploring the world's most mysterious places and eerie travel destinations.",
     author: "Cycrack",
